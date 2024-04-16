@@ -150,5 +150,11 @@ input[type='text'] {
 	border-radius: 3px;
 	border: none;
 	width: 75%;
-	margin: 0 auto 1rem auto;
+	margin: 1.25rem auto;
+  line-height: 2rem;
+  font-size: 1rem;
+  text-align: center;
 }
+
+/* === generated button === */
+
