@@ -84,10 +84,29 @@ const characters = [
 const displayPass = document.querySelector('.password')
 const generateBtn = document.querySelector('.generate-btn')
 
+const mid = document.getElementById('mid')
+const low = document.getElementById('low')
+const high = document.getElementById('high')
+
+if (low.checked) {
+  mid.checked = false
+}
+
 generateBtn.addEventListener('click', () => {
 	const passWord = function (array) {
+		let secureLevel
+    if (low.checked) {
+      secureLevel = 1
+    }
+		if (mid.checked) {
+			secureLevel = 3
+		}
+    if (high.checked) {
+      secureLevel = 5
+    }
+
 		let newPass = ''
-		for (let i = 0; i <= 16; i++) {
+		for (let i = 0; i < secureLevel; i++) {
 			let randoChar = Math.floor(Math.random() * characters.length - 1) + 1
 			newPass += `${array[randoChar]}`
 		}
