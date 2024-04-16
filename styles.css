@@ -144,16 +144,18 @@ input[type='checkbox']:checked::after {
 
 /* === generated password display === */
 
-input[type='text'] {
-	display: block;
+.password-display {
+	display: flex;
+  justify-content: center;
+  align-items: center;
 	outline: 3px solid rgba(1, 1, 1, 1);
 	border-radius: 5px;
 	border: none;
+  height: 2rem;
 	width: 75%;
 	margin: 1.25rem auto;
-  line-height: 2rem;
+  /* line-height: 2rem; */
   font-size: 1rem;
-  text-align: center;
 }
 
 /* === generate button === */
@@ -167,6 +169,7 @@ input[type='text'] {
   font-size: 1.15rem;
   font-weight: 500;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .generate-btn:hover {
